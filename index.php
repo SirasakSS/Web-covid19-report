@@ -10,7 +10,6 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -48,88 +47,86 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">Home</a>
-            <form class="d-flex" novalidate method="POST" action="province.php" novalidate>
-                <select class="form-select" aria-label="Default select example" name="province_con">
+            <form class="d-flex" novalidate method="POST" action="province.php" novalidate name="form_province">
+            <select class="form-select" aria-label="Default select example" id="province" name="province">
                     <option selected disabled> กรุณาเลือกจังหวัด </option>
-                    <option value="0">อุทัยธานี</option>
-                    <option value="1">ปัตตานี</option>
-                    <option value="2">หนองบัวลำภู</option>
-                    <option value="3">ขอนแก่น</option>
-                    <option value="4">บุรีรัมย์</option>
-                    <option value="5">นครสวรรค์</option>
-                    <!-- <option value="6">ทั้งประเทศ</option> -->
-                    <option value="7">กาฬสินธุ์</option>
-                    <option value="8">ตราด</option>
-                    <option value="9">กระบี่</option>
-                    <option value="10">แม่ฮ่องสอน</option>
-                    <option value="11">ชลบุรี</option>
-                    <option value="12">ยะลา</option>
-                    <option value="13">สิงห์บุรี</option>
-                    <option value="14">อุตรดิตถ์</option>
-                    <option value="15">ลพบุรี</option>
-                    <option value="16">สระแก้ว</option>
-                    <option value="17">สมุทรปราการ</option>
-                    <option value="18">อุบลราชธานี</option>
-                    <option value="19">ตาก</option>
-                    <option value="20">นราธิวาส</option>
-                    <option value="21">บึงกาฬ</option>
-                    <option value="22">สุพรรณบุรี</option>
-                    <option value="23">ระนอง</option>
-                    <option value="24">เชียงราย</option>
-                    <option value="25">ชุมพร</option>
-                    <option value="26">ประจวบคีรีขันธ์</option>
-                    <option value="27">ชัยนาท</option>
-                    <option value="28">ชัยภูมิ</option>
-                    <option value="29">ร้อยเอ็ด</option>
-                    <option value="30">ยโสธร</option>
-                    <option value="31">นครราชสีมา</option>
-                    <option value="32">นครปฐม</option>
-                    <option value="33">พระนครศรีอยุธยา</option>
-                    <option value="34">อำนาจเจริญ</option>
-                    <option value="35">กำแพงเพชร</option>
-                    <option value="36">พัทลุง</option>
-                    <option value="37">พังงา</option>
-                    <option value="38">ปทุมธานี</option>
-                    <option value="39">ระยอง</option>
-                    <option value="40">เชียงใหม่</option>
-                    <option value="41">ลำพูน</option>
-                    <option value="42">อ่างทอง</option>
-                    <option value="43">นครพนม</option>
-                    <option value="44">น่าน</option>
-                    <option value="45">มหาสารคาม</option>
-                    <option value="46">เพชรบูรณ์</option>
-                    <option value="47">อุดรธานี</option>
-                    <option value="48">สุราษฎร์ธานี</option>
-                    <option value="49">ฉะเชิงเทรา</option>
-                    <option value="50">กาญจนบุรี</option>
-                    <option value="51">มุกดาหาร</option>
-                    <option value="52">สงขลา</option>
-                    <option value="53">นนทบุรี</option>
-                    <option value="54">นครศรีธรรมราช</option>
-                    <option value="55">สุโขทัย</option>
-                    <option value="56">นครนายก</option>
-                    <option value="57">พิจิตร</option>
-                    <option value="58">แพร่</option>
-                    <option value="59">ราชบุรี</option>
-                    <option value="60">สตูล</option>
-                    <option value="61">พิษณุโลก</option>
-                    <!-- <option value="62">หนองคาย</option> -->
-                    <option value="63">จันทบุรี</option>
-                    <option value="64">เพชรบุรี</option>
-                    <option value="65">หนองคาย</option>
-                    <option value="66">สมุทรสงคราม</option>
-                    <option value="67">ศรีสะเกษ</option>
-                    <option value="68">พะเยา</option>
-                    <option value="69">ภูเก็ต</option>
-                    <option value="70">สุรินทร์</option>
-                    <option value="71">ลำปาง</option>
-                    <option value="72">สกลนคร</option>
-                    <option value="73">กรุงเทพมหานคร</option>
-                    <option value="74">เลย</option>
-                    <option value="75">ปราจีนบุรี</option>
-                    <option value="76">สระบุรี</option>
-                    <option value="77">ตรัง</option>
-                    <option value="78">สมุทรสาคร</option>
+                    <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                    <option value="กระบี่">กระบี่ </option>
+                    <option value="กาญจนบุรี">กาญจนบุรี </option>
+                    <option value="กาฬสินธุ์">กาฬสินธุ์ </option>
+                    <option value="กำแพงเพชร">กำแพงเพชร </option>
+                    <option value="ขอนแก่น">ขอนแก่น</option>
+                    <option value="จันทบุรี">จันทบุรี</option>
+                    <option value="ฉะเชิงเทรา">ฉะเชิงเทรา </option>
+                    <option value="ชัยนาท">ชัยนาท </option>
+                    <option value="ชัยภูมิ">ชัยภูมิ </option>
+                    <option value="ชุมพร">ชุมพร </option>
+                    <option value="ชลบุรี">ชลบุรี </option>
+                    <option value="เชียงใหม่">เชียงใหม่ </option>
+                    <option value="เชียงราย">เชียงราย </option>
+                    <option value="ตรัง">ตรัง </option>
+                    <option value="ตราด">ตราด </option>
+                    <option value="ตาก">ตาก </option>
+                    <option value="นครนายก">นครนายก </option>
+                    <option value="นครปฐม">นครปฐม </option>
+                    <option value="นครพนม">นครพนม </option>
+                    <option value="นครราชสีมา">นครราชสีมา </option>
+                    <option value="นครศรีธรรมราช">นครศรีธรรมราช </option>
+                    <option value="นครสวรรค์">นครสวรรค์ </option>
+                    <option value="นราธิวาส">นราธิวาส </option>
+                    <option value="น่าน">น่าน </option>
+                    <option value="นนทบุรี">นนทบุรี </option>
+                    <option value="บึงกาฬ">บึงกาฬ</option>
+                    <option value="บุรีรัมย์">บุรีรัมย์</option>
+                    <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์ </option>
+                    <option value="ปทุมธานี">ปทุมธานี </option>
+                    <option value="ปราจีนบุรี">ปราจีนบุรี </option>
+                    <option value="ปัตตานี">ปัตตานี </option>
+                    <option value="พะเยา">พะเยา </option>
+                    <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา </option>
+                    <option value="พังงา">พังงา </option>
+                    <option value="พิจิตร">พิจิตร </option>
+                    <option value="พิษณุโลก">พิษณุโลก </option>
+                    <option value="เพชรบุรี">เพชรบุรี </option>
+                    <option value="เพชรบูรณ์">เพชรบูรณ์ </option>
+                    <option value="แพร่">แพร่ </option>
+                    <option value="พัทลุง">พัทลุง </option>
+                    <option value="ภูเก็ต">ภูเก็ต </option>
+                    <option value="มหาสารคาม">มหาสารคาม </option>
+                    <option value="มุกดาหาร">มุกดาหาร </option>
+                    <option value="แม่ฮ่องสอน">แม่ฮ่องสอน </option>
+                    <option value="ยโสธร">ยโสธร </option>
+                    <option value="ยะลา">ยะลา </option>
+                    <option value="ร้อยเอ็ด">ร้อยเอ็ด </option>
+                    <option value="ระนอง">ระนอง </option>
+                    <option value="ระยอง">ระยอง </option>
+                    <option value="ราชบุรี">ราชบุรี</option>
+                    <option value="ลพบุรี">ลพบุรี </option>
+                    <option value="ลำปาง">ลำปาง </option>
+                    <option value="ลำพูน">ลำพูน </option>
+                    <option value="เลย">เลย </option>
+                    <option value="ศรีสะเกษ">ศรีสะเกษ</option>
+                    <option value="สกลนคร">สกลนคร</option>
+                    <option value="สงขลา">สงขลา </option>
+                    <option value="สมุทรสาคร">สมุทรสาคร </option>
+                    <option value="สมุทรปราการ">สมุทรปราการ </option>
+                    <option value="สมุทรสงคราม">สมุทรสงคราม </option>
+                    <option value="สระแก้ว">สระแก้ว </option>
+                    <option value="สระบุรี">สระบุรี </option>
+                    <option value="สิงห์บุรี">สิงห์บุรี </option>
+                    <option value="สุโขทัย">สุโขทัย </option>
+                    <option value="สุพรรณบุรี">สุพรรณบุรี </option>
+                    <option value="สุราษฎร์ธานี">สุราษฎร์ธานี </option>
+                    <option value="สุรินทร์">สุรินทร์ </option>
+                    <option value="สตูล">สตูล </option>
+                    <option value="หนองคาย">หนองคาย </option>
+                    <option value="หนองบัวลำภู">หนองบัวลำภู </option>
+                    <option value="อำนาจเจริญ">อำนาจเจริญ </option>
+                    <option value="อุดรธานี">อุดรธานี </option>
+                    <option value="อุตรดิตถ์">อุตรดิตถ์ </option>
+                    <option value="อุทัยธานี">อุทัยธานี </option>
+                    <option value="อุบลราชธานี">อุบลราชธานี</option>
+                    <option value="อ่างทอง">อ่างทอง </option>
                 </select>
                 <button class="btn btn-outline-success ms-2" type="submit">Search</button>
             </form>
